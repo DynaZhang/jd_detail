@@ -1,0 +1,120 @@
+1、转换
+	1、属性
+		1、转换属性  
+			transform:转换函数
+		2、transform-origin:转换原点
+			数值/百分比/关键字
+		3、transform-style
+			如何处理子元素位置
+			取值：
+				1、flat ：默认值
+				2、preserve-3d : 保留子元素3d位置
+		4、perspective
+			人眼到投射元素的距离
+	2、2D转换
+		1、位移
+			函数：
+				translate(x)
+				translate(x,y)
+				translateX(x)
+				translateY(y)
+		2、旋转
+			函数:rotate(ndeg);
+		3、缩放
+			函数：
+				scale(value)
+				scale(x,y)
+				scaleX(x)
+				scaleY(y)
+		4、倾斜
+			函数：
+				skew(x)
+				skew(x,y)
+				skewX(x)
+				skewY(y)
+	3、3D转换
+		1、3D旋转
+			rotateX(xdeg)
+			rotateY(ydeg)
+			rotateZ(zdeg)
+			rotate3D(x,y,z,ndeg)
+		2、3D位移
+			translateZ(z)
+			translate3D(x,y,z)
+2、过渡
+	属性：
+		1、指定过渡属性
+			transition-property
+		2、指定过渡时长
+			transition-duration
+			以s|ms作为单位
+		3、指定 时间速度 曲线函数
+			transition-timing-function
+			ease,linear,ease-in,ease-out,ease-in-ount
+		4、指定 过渡延迟
+			transition-delay
+		5、transition
+			property duration timing-function dealy
+3、动画
+	1、声明动画
+		@keyframes 动画名称{
+			0%{
+				动画开始时的样式
+			}
+			... ...
+			100%{
+				动画结束时的样式
+			}
+		}
+
+		@-moz-keyframes 动画名称{
+			0%{
+				动画开始时的样式
+			}
+			... ...
+			100%{
+				动画结束时的样式
+			}
+		}
+
+		@-webkit-keyframes 动画名称{
+			0%{
+				动画开始时的样式
+			}
+			... ...
+			100%{
+				动画结束时的样式
+			}
+		}
+	2、使用动画
+		将 声明好的动画绑定在指定的选择器上
+		属性：
+		1、animation-name
+		2、animation-duration
+		3、animation-timing-function
+		4、animation-delay
+		5、animation-iteration-count
+			取值：
+				1、绝对值
+				2、infinite
+		6、animation-direction
+			取值：
+				1、normal
+				2、reverse
+					逆向播放
+				3、alternate
+					轮流播放
+		7、animation
+			name duration timing-function delay iteration-count direction
+		8、animation-fill-mode
+			1、none
+			2、forwards
+				动画播放后，会保留在最后一帧上
+			3、backwards
+				动画播放前(延迟时间内)，会保留在第一帧上
+			4、both
+				前后都应用
+		9、animation-play-state
+			1、paused ：暂停
+			2、running ：播放
+
